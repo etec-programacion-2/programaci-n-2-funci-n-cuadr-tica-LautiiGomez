@@ -12,7 +12,62 @@ fun main() {
         return
     }
     
-    println("La función cuadrática es igual a f(x) = ${a}x² + ${b}x + $c")
+    println("Función cuadrática: f(x) = ${formatearFuncion(a, b, c)}")
     
+    mostrarTablaValores(a, b, c, -5, 5)
 }
 
+//  Etapa 2: Cálculo de Valores de la Función
+
+fun calcularFuncionCuadratica(x: Double, a: Double, b: Double, c: Double): Double {
+    return a * x * x + b * x + c
+}
+
+fun formatearFuncion(a: Double, b: Double, c: Double): String {
+    val resultado = StringBuilder()
+    
+    resultado.append("${a}x²")
+    
+    if (b >= 0) {
+        resultado.append(" + ${b}x")
+    } else {
+        resultado.append(" - ${-b}x")
+    }
+    
+    if (c >= 0) {
+        resultado.append(" + $c")
+    } else {
+        resultado.append(" - ${-c}")
+    }
+    
+    return resultado.toString()
+}
+
+fun mostrarTablaValores(
+    a: Double, 
+    b: Double, 
+    c: Double, 
+    inicio: Int, 
+    fin: Int
+) {
+    val lineaSeparadora = "=" * 30
+    
+    println(lineaSeparadora)
+    println("   x   |   f(x)   ")
+    println(lineaSeparadora)
+    
+    for (x in inicio..fin) {
+        val fx = calcularFuncionCuadratica(x.toDouble(), a, b, c)
+        printf("  %2d   |  %6.2f  \n", x, fx)
+    }
+    
+    println(lineaSeparadora)
+}
+
+fun printf(format: String, vararg args: Any) {
+    print(String.format(format, *args))
+}
+
+operator fun String.times(n: Int): String {
+    return this.repeat(n)
+}
