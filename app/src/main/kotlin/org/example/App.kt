@@ -3,19 +3,16 @@ package org.example
 // Etapa 1: Estructura Básica y Definición de Coeficientes
 
 fun main() {
-    val a: Int = 5
-    val b: Int = 3
-    val c: Int = -2
-
-    if (a == 0) {
-        println("El valor de 'a' no puede ser cero. No es una función cuadrática.")
+    val a = 1.0
+    val b = -3.0
+    val c = 2.0
+    
+    if (a == 0.0) {
+        println("El coeficiente 'a' no puede ser cero. La función no es cuadrática.")
         return
     }
-
-    val funcion = funcionCuadratica(a, b, c)
-    println("La función ingresada es: $funcion")
+    
+    println("La función cuadrática es igual a f(x) = ${a}x² + ${b}x + $c")
+    
 }
 
-fun funcionCuadratica(a: Int, b: Int, c: Int): String {
-    return "${a}x² + ${b}x + $c"
-}
