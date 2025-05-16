@@ -1,4 +1,5 @@
 package org.example
+import kotlin.math.sqrt
 
 // Etapa 1: Estructura Básica y Definición de Coeficientes
 fun main() {
@@ -24,16 +25,12 @@ fun main() {
 }
 
 // Etapa 2: Cálculo de Valores de la Función
-/**
- * Calcula el valor de la función cuadrática para un valor x dado
- */
+// Calcula el valor de la función cuadrática para un valor x dado
 fun calcularFuncionCuadratica(x: Double, a: Double, b: Double, c: Double): Double {
     return a * x * x + b * x + c
 }
 
-/**
- * Formatea la representación de la función cuadrática como string
- */
+// Formatea la representación de la función cuadrática como string
 fun formatearFuncion(a: Double, b: Double, c: Double): String {
     val resultado = StringBuilder()
     
@@ -77,9 +74,7 @@ fun formatearFuncion(a: Double, b: Double, c: Double): String {
     return resultado.toString()
 }
 
-/**
- * Muestra una tabla de valores de la función
- */
+// Muestra una tabla de valores de la función
 fun mostrarTablaValores(
     a: Double,
     b: Double,
@@ -100,16 +95,12 @@ fun mostrarTablaValores(
 }
 
 // Etapa 3: Cálculo de Raíces
-/**
- * Calcula el discriminante de la función cuadrática
- */
+// Calcula el discriminante de la función cuadrática
 fun calcularDiscriminante(a: Double, b: Double, c: Double): Double {
     return b * b - 4 * a * c
 }
 
-/**
- * Calcula y muestra las raíces de la función cuadrática
- */
+// Calcula y muestra las raíces de la función cuadrática
 fun calcularYMostrarRaices(a: Double, b: Double, c: Double) {
     val discriminante = calcularDiscriminante(a, b, c)
     
@@ -151,16 +142,12 @@ fun calcularYMostrarRaices(a: Double, b: Double, c: Double) {
     println("=" * 30)
 }
 
-/**
- * Función auxiliar para formatear la salida con printf
- */
+// Función auxiliar para formatear la salida con printf
 fun printf(format: String, vararg args: Any) {
     print(String.format(format, *args))
 }
 
-/**
- * Operador de repetición para cadenas
- */
+// Operador de repetición para cadenas
 operator fun String.times(n: Int): String {
     return this.repeat(n)
 }
