@@ -1,8 +1,8 @@
 # 2025-calculo-cuadratica
 
 ## Datos del Alumno
-- **Nombre**: [Nombre del Alumno]
-- **Apellido**: [Apellido del Alumno]
+- **Nombre**: Lautaro
+- **Apellido**: Gómez Salvi
 
 ## Descripción del Proyecto
 Este proyecto consiste en desarrollar una aplicación en Kotlin que permita calcular y mostrar los valores de una función cuadrática, así como determinar sus raíces.
@@ -11,11 +11,11 @@ Este proyecto consiste en desarrollar una aplicación en Kotlin que permita calc
 
 ### Etapa 1: Estructura Básica y Definición de Coeficientes
 **Objetivo**: Crear la estructura del proyecto y definir los coeficientes de la función.
-- [ ] Configurar proyecto Kotlin con Gradle
-- [ ] Crear función main() para el programa
-- [ ] Definir los coeficientes a, b, c como constantes en el programa
-- [ ] Validar que 'a' no sea cero
-- [ ] Mostrar la función ingresada en formato ax² + bx + c
+- [ ✅ ] Configurar proyecto Kotlin con Gradle
+- [ ✅ ] Crear función main() para el programa
+- [ ✅ ] Definir los coeficientes a, b, c como constantes en el programa
+- [ ✅ ] Validar que 'a' no sea cero
+- [ ✅ ] Mostrar la función ingresada en formato ax² + bx + c
 
 **Commit**: "feat: Estructura básica y definición de coeficientes"
 
